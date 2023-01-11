@@ -1,0 +1,4 @@
+{% load menu_tags %}
+{% for item in items %}
+    <a href="{% url 'menu_item' item.name %}"> {% for i in item.level|times %} - {% endfor %} {{ item.name }}</a> <br>
+{% endfor %}
